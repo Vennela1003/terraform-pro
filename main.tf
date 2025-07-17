@@ -14,8 +14,8 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 
-resource "azurerm_storage_account" "vennelastorage1345" {
-    name                     = "vennelastorage1345"
+resource "azurerm_storage_account" "vennelastorage13" {
+    name                     = "vennelastorage13"
     resource_group_name      = azurerm_resource_group.casestudy.name
     location                 = azurerm_resource_group.casestudy.location
     account_tier             = "Standard"
@@ -25,6 +25,6 @@ resource "azurerm_storage_account" "vennelastorage1345" {
 
 resource "azurerm_storage_container" "vennelablob" {
   name ="vennelablob"
-  storage_account_name ="azurerm_storage_account.vennelastorage1345.name"
+  storage_account_name ="azurerm_storage_account.vennelastorage13.name"
   container_access_type="private"
 }
